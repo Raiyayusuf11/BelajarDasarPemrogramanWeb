@@ -5,25 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portofolio Yusuf</title>
     <link rel="stylesheet" href="assets\css\styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   </head>
   <!-- ################## -->
   <body>
     <header>
       <div class="jumbotron">
+        <div class="sosialLinks">
+          <a href="https://github.com/Raiyayusuf11" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/raiya-yusuf-priatmojo" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <a href="https://www.youtube.com/@raiyayusuf11" target="_blank"><i class="fab fa-youtube"></i></a>
+          <a href="https://www.instagram.com/raiyaysf_" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://wa.link/gse75a" target="_blank"><i class="fab fa-whatsapp"></i></a>
+          <a href="https://www.shutterstock.com/g/Raiya_Yusuf" target="_blank"><i class="fab fa-shutterstock"></i></a>
+        </div>
         <img src="assets\img\yusuf.jpg" id="profileYusuf" />
-        <h1 id="nama">Hey, i'm Raiya Yusuf Priatmojo</h1>
+        <h1 id="nama">Hey There, i'm Raiya Yusuf Priatmojo</h1>
         <p>
-          Undergraduate Mechatronics Engineering Student at Yogyakarta State
-          University
+          Undergraduate Mechatronics Engineering Student at Yogyakarta State University
         </p>
       </div>
 
       <nav>
         <ul>
-          <li><a href="#home">Home</a></li>
+          <li><a href="#about">Home</a></li>
           <li><a href="#experience">Experience</a></li>
           <li><a href="#project">Project</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <!-- <li><a href="#contact">Contact</a></li> -->
         </ul>
       </nav>
     </header>
@@ -32,13 +40,12 @@
 
     <main>
       <div id="content">
-        <article class="about">
+        <article class="about" id="about">
           <div id="aboutMe">
             <h2>About Me</h2>
             <p>
-              Here you will find more information about me, what I do, and my
-              current skills mostly in terms <br />
-              of programming and technology
+              Learn more about me, my projects, and my technical abilities,
+              <br />with a focus on programming and technology.
             </p>
           </div>
           <div class="about-container">
@@ -85,27 +92,77 @@
           <h2>Experience</h2>
           <h3>Programmer Division - UNY Robotics Team</h3>
           <h4>October 2022 - Present</h4>
-          <p>
-            I joined the UNY Robotics Team as a member of the programming
-            division. Here, I have honed my skills in various programming
-            languages such as C++, Python, and C. Additionally, I have gained
-            hands-on experience with microcontrollers like STM32, Arduino, and
-            ESP32. I am also actively involved in the field of computer vision,
-            particularly in implementing object detection using platforms like
-            Roboflow and Ultralytics. This experience has deepened my
-            understanding of system integration and software development, which
-            serves as a strong foundation for creating efficient and functional
-            websites.
-          </p>
+          <div class="experienceContent">
+            <div class="textContent">
+              <p>
+                I joined the UNY Robotics Team as a member of the programming
+                division. Here, I have honed my skills in various programming
+                languages such as C++, Python, and C. Additionally, I have gained
+                hands-on experience with microcontrollers like STM32, Arduino, and
+                ESP32. I am also actively involved in the field of computer
+                vision, particularly in implementing object detection using
+                platforms like Roboflow and Ultralytics. This experience has
+                deepened my understanding of system integration and software
+                development, which serves as a strong foundation for creating
+                efficient and functional websites.
+              </p>
+            </div>
+            <div class="sliderContainer">
+              <div class="slides">
+                <img
+                  src="assets\img\programmer1.jpg"
+                  alt="Foto Robotik 1"
+                  class="imgRobot"
+                />
+                <img
+                  src="assets\img\programmer2.jpg"
+                  alt="Foto Robotik 2"
+                  class="imgRobot"
+                />
+                <img
+                  src="assets\img\programmer3.jpg"
+                  alt="Foto Robotik 2"
+                  class="imgRobot"
+                />
+              </div>
+              <button class="prev">&#10094</button>
+              <button class="next">&#10095</button>
+            </div>
+          </div>
           <h3>BAZNAS Scholarship Recipient</h3>
           <h4>September 2024 - Present</h4>
-          <p>
-            I was selected as a recipient of the BAZNAS Scholarship Batch 6,
-            which provides financial support for my education in programming.
-            This scholarship has allowed me to focus on developing skills,
-            including microcontroller programming and system integration, which
-            are highly valuable in complex website development.
-          </p>
+          <div class="experienceContent">
+            <div class="textContent">
+              <p>
+                I was selected as a recipient of the BAZNAS Scholarship Batch 6,
+                which provides financial support for my education in programming.
+                This scholarship has allowed me to focus on developing skills,
+                including microcontroller programming and system integration, which
+                are highly valuable in complex website development.
+              </p>
+            </div>
+            <div class="sliderContainer">
+              <div class="slides">
+                <img
+                src="assets\img\programmer1.jpg"
+                alt="Foto Robotik 1"
+                class="imgRobot"
+              />
+              <img
+                src="assets\img\programmer2.jpg"
+                alt="Foto Robotik 2"
+                class="imgRobot"
+              />
+              <img
+                src="assets\img\programmer3.jpg"
+                alt="Foto Robotik 2"
+                class="imgRobot"
+              />
+              </div>
+              <button class="prev">&#10094</button>
+              <button class="next">&#10095</button>
+            </div>
+          </div>
           <h3>PKKMB Guide at UNY 2023</h3>
           <h4>August 2023</h4>
           <p>
@@ -119,12 +176,7 @@
           <h3>Shutterstock Contributor</h3>
           <h4>September 2021 - Present</h4>
           <p>
-            As a Shutterstock contributor, I upload high-quality photographs to
-            the platform, providing a diverse range of visual content, including
-            landscapes, portraits, and creative compositions. This experience
-            allows me to contribute to a global library of images, which can be
-            utilized for various purposes, including website design and digital
-            media.
+            As a Shutterstock contributor, I upload high-quality photographs to the platform, offering a diverse range of visual content, including landscapes, portraits, and creative compositions. This experience allows me to contribute to a global library of images that can be utilized for various purposes, such as website design, digital media, and creative projects. If you're curious to see my work, feel free to visit my <a href="https://www.shutterstock.com/g/Raiya_Yusuf">Shutterstock</a> portofolio.
           </p>
           <h3>Extracurricular Robotics Instructor - SDN Serayu</h3>
           <h4>June 2023 - December 2024</h4>
@@ -143,8 +195,8 @@
           <div class="contactAwal">
             <h2>Contact</h2>
             <p>
-              Feel free to Contact me by submitting the form below and I will
-              get back to you <br />as soon as possible
+              Send me a message using the form below, and I’ll respond as
+              quickly as possible.
             </p>
             <div class="formPertanyaan">
               <form action="">
@@ -192,5 +244,6 @@
         &#169; Copyright 2025. Made by Raiya Yusuf Priatmojo
       </p>
     </footer>
+    <script src="assets/js/script.js"></script>
   </body>
 </html>
