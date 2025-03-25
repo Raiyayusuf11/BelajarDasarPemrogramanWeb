@@ -1,21 +1,44 @@
-let slideIndex = 0;
-const slides = document.querySelector(".slides");
-const totalSlide = slides.children.length;
+document.addEventListener("DOMContentLoaded", function () {
+  // sek go scroll
+  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+    anchor.addEventListener("click", function (e) {
+      e.preventDefault();
 
-function showSlide(index) {
-  if (index >= totalSlide) slideIndex = 0;
-  if (index < 0) slideIndex = totalSlide - 1;
-  slides.style.transform = `translateX(${-slideIndex * 100}%)`;
-}
+      const targetId = this.getAttribute("href");
+      const targetElement = document.querySelector(targetId);
 
-document.querySelector(".next").addEventListener("click", () => {
-  slideIndex++;
-  showSlide(slideIndex);
+      if (targetElement) {
+        window.scrollTo({
+          top: targetElement.offsetTop - 100, // adjust navbarr
+          behavior: "smooth",
+        });
+      }
+    });
+  });
+
+  // class saat scroll
+  window.addEventListener("scroll", function () {
+    const experienceSections = document.querySelectorAll(
+      ".experienceContainer"
+    );
+    const navLinks = document.querySelectorAll(".dropdown-menu a");
+
+    let current = "";
+
+    experienceSections.forEach((section) => {
+      const sectionTop = section.offsetTop;
+      const sectionHeight = section.clientHeight;
+
+      if (pageYOffset >= sectionTop - 150) {
+        current = section.getAttribute("id");
+      }
+    });
+
+    navLinks.forEach((link) => {
+      link.classList.remove("active");
+      if (link.getAttribute("href") === `#${current}`) {
+        link.classList.add("active");
+      }
+    });
+  });
 });
-
-document.querySelector(".prev").addEventListener("click", () => {
-  slideIndex--;
-  showSlide(slideIndex);
-});
-
-showSlide(slideIndex);
